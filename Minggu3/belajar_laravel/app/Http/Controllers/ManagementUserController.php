@@ -8,10 +8,15 @@ class ManagementUserController extends Controller
 {
     public function index(){
         //return "Halo ini adalah method index, dalam controllers ManagementUser";
-        return "Method ini nantinya akan digunkan untuk mengambil semua data user";
+        //return "Method ini nantinya akan digunkan untuk mengambil semua data user";
+        $nama = "Dillah Amalia Fiqyani";
+
+        $pelajaran = ["Algoritma & Pemrograman", "Kalkulus","Pemrograman Web"];
+
+        return view('home', compact('nama','pelajaran'));
     }
 
-    public function create(){
+    /*public function create(){
         return "Method ini nantinya akan digunakan untuk menampilkan form untuk menambah data user";
     }
 
@@ -33,6 +38,6 @@ class ManagementUserController extends Controller
 
     public function destroy($id){
         return "Method ini nantinya digunakan untuk menghapus data user dengan id=". $id;
-    }
+    }*/
     
 }
