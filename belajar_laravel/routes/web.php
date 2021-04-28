@@ -44,3 +44,10 @@ Route::get('/', function () {
 Route::get("/dashboard", function(){
     return view("backend.dashboard");
 });
+
+Route::group(['namespace' =>'Backend'], function()
+{
+    //Route::resource('dashboard', 'DashboardController');
+    Route::resource('pendidikan', 'PendidikanController');
+    Route::resource('pengalaman_kerja', 'PengalamanKerjaController');
+});
